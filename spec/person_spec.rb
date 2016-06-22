@@ -20,10 +20,21 @@ describe "Person class" do
     expect(person.email).to be_an(Array)
   end
 
+  it "Should have phone numbers as an array" do
+    person = Person.new("joe", "bloggs")
+    expect(person.phone_numbers).to be_an(Array)
+  end
+
   it "Should be able to add elements to the email array" do
     person = Person.new("joe", "bloggs")
     person.add_email('hari@gmail.com')
     expect(person.email).to eq ["hari@gmail.com"]
+  end
+
+  it "Should be able to add elements to the phone numbers array" do
+    person = Person.new("joe", "bloggs")
+    person.add_phone("07878337982")
+    expect(person.phone_numbers).to eq ["07878337982"]
   end
 
   it "Should be able to remove an element from the email array" do
@@ -32,4 +43,14 @@ describe "Person class" do
     person.remove_email(0)
     expect(person.email).to be_empty
   end
+
+  it "Should be able to remove an element from the phone numbers array" do
+    person = Person.new("joe", "bloggs")
+    person.add_phone("07878337982")
+    person.remove_phone(0)
+    expect(person.phone_numbers).to be_empty
+  end
+
+
+
 end
