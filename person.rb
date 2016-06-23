@@ -30,4 +30,8 @@ class Person
     @phone_numbers.delete_at(remove_phone)
   end
 
+  def person_s
+    return "#{fullname} was born on #{@dob}.\n Their email addresses are:#{@email}.\n Their phone numbers are:#{@phone_numbers}.\n"
+  end
+
 end
