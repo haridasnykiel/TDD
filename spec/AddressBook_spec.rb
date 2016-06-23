@@ -18,5 +18,8 @@ describe "AddressBook class" do
 
   end
 
-  
+  it "Should not be able to add an object from any other class apart from Person and FamilyMember" do
+    
+  end
+
 end
