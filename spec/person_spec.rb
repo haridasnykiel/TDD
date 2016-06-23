@@ -62,5 +62,6 @@ describe "Person class" do
       expect(person.person_s).to eq "Joe Bloggs was born on 1992-02-03.\n Their email addresses are:[].\n Their phone numbers are:[].\n"
   end
 
+  
 
 end
