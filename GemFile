@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.3.1'
 
-gem 'rspec'
+gem 'rspec' # you can also define version of the gem is required, simple add '3.0.0'to the end of this code.
 gem 'httparty'
 gem 'rake'
+gem 'pry'

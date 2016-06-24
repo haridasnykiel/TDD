@@ -7,4 +7,5 @@ describe "FamilyMember class" do
     expect(person.relationship).to eq "Brother"
   end
 
+  
 end

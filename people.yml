@@ -1,0 +1,31 @@
+people:
+
+  - first_name: James
+    surname: Smith
+    dob: 2 Jan 2003
+    email:
+      - james@hotmail.com
+      - j@gmail.com
+    phone_numbers:
+      - 02081938294
+      - 07878334982
+
+  - first_name: Tony
+    surname: Ashford
+    dob: 3 Feb 1994
+    email:
+      - tony@hotmail.com
+      - ta@gmail.com
+    phone_numbers:
+      - 07877823424
+      - 02083948291
+
+  - first_name: Harry
+    surname: Craig
+    dob: 8 Jul 1998
+    email:
+      - harry@hotmail.com
+      - hc@gmail.com
+    phone_numbers:
+      - 07283947581
+      - 02082938459
