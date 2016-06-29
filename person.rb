@@ -15,11 +15,27 @@ class Person
   end
 
   def add_email(add_email)
-    @email << add_email
+    regex = /\A\w+(?:\.\w+)?@[a-z]+\.(?:com|org|co\.uk)\z/
+    check = regex.match(add_email)
+
+    if check == nil
+      raise ArgumentError, "Please enter a correct email address."
+    else
+      @email << add_email
+    end
+
   end
 
   def add_phone(add_phone)
-    @phone_numbers << add_phone
+    regex = /020\d+{8}/
+    check = regex.match(add_phone)
+
+    if check == nil
+      raise ArgumentError, "Please enter a correct phone number."
+    else
+      @phone_numbers << add_phone
+    end
+
   end
 
   def remove_email(remove_email)

@@ -33,14 +33,24 @@ describe "Person class" do
 
   it "Should be able to add elements to the email array" do
     # person = Person.new("joe", "bloggs")
-    @person.add_email('hari@gmail.com')
+    @person.add_email("hari@gmail.com")
     expect(@person.email).to eq ["hari@gmail.com"]
+  end
+
+  it "Should be able to only add a email formatted string in the email array." do
+    # @person.add_email('jjjas.dot')
+    expect{@person.add_email("jajsjs.sot")}.to raise_error(ArgumentError)
   end
 
   it "Should be able to add elements to the phone numbers array" do
     # person = Person.new("joe", "bloggs")
-    @person.add_phone("07878337982")
-    expect(@person.phone_numbers).to eq ["07878337982"]
+    @person.add_phone("02078337982")
+    expect(@person.phone_numbers).to eq ["02078337982"]
+  end
+
+  it "Should be able to only add a correct phone number in the phone_numbers array." do
+    # @person.add_email('jjjas.dot')
+    expect{@person.add_phone("000000999999998")}.to raise_error(ArgumentError)
   end
 
   it "Should be able to remove an element from the email array" do
@@ -52,7 +62,7 @@ describe "Person class" do
 
   it "Should be able to remove an element from the phone numbers array" do
     # person = Person.new("joe", "bloggs")
-    @person.add_phone("07878337982")
+    @person.add_phone("02078337982")
     @person.remove_phone(0)
     expect(@person.phone_numbers).to be_empty
   end
@@ -62,6 +72,6 @@ describe "Person class" do
       expect(person.person_s).to eq "Joe Bloggs was born on 1992-02-03.\n Their email addresses are:[].\n Their phone numbers are:[].\n"
   end
 
-  
+
 
 end
